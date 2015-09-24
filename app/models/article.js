@@ -18,4 +18,4 @@ ArticleSchema.pre('save', function(next){
 	next();
 });
 
-module.exports = mongoose.model('Article', ArticlesSchema);
+module.exports = mongoose.model('Article', ArticleSchema);

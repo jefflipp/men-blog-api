@@ -8,14 +8,14 @@ var express = require( 'express' ),
 
 
 //body=parser conig
-app.use( body-parser.urlencoded({ extended: true }));
-app.use( body-parser.json());
+app.use( bodyParser.urlencoded({ extended: true }));
+app.use( bodyParser.json());
 
 //connect our DB
 mongoose.connect( DB );
 
 //routes config //namespace for api
-app.use( '/api', apiRoute );
+app.use( '/api', apiRouter );
 
 //server
 app.listen(port);
