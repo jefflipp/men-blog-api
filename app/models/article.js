@@ -2,6 +2,7 @@ var mongoose = require('mongoose'),
 		Schema = mongoose.Schema;
 
 
+//createsa new schema
 var ArticleSchema = new Schema({
 	title: String,
 	author: String,
@@ -10,7 +11,7 @@ var ArticleSchema = new Schema({
 	content: String
 })
 
-//definte prehhok
+//define prehook
 //before each save the created_at value will be set
 
 ArticleSchema.pre('save', function(next){

@@ -1,5 +1,5 @@
 var express = require( 'express' ),
-	  app = express(),
+	  app = express(), //call the function -> isntantiates the app
 	  bodyParser = require( 'body-parser' ),
 	  mongoose = require( 'mongoose' ),
 	  apiRouter = require( './app/config/routes' ),
@@ -15,7 +15,7 @@ app.use( bodyParser.json());
 mongoose.connect( DB );
 
 //routes config //namespace for api
-app.use( '/api', apiRouter );
+app.use( '/api', apiRouter  );
 
 //server
 app.listen(port);
